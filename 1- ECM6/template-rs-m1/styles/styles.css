@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: lightblue;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tech-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#activity-form {
+    margin: 20px 0;
+}
+
+#activity-form input {
+    margin: 5px;
+    padding: 8px;
+}
+
+#activity-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+}
