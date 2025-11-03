@@ -1,4 +1,3 @@
-console.log(tempData);
 
 const moviesContainer = document.getElementById('movies-container');
 
@@ -60,4 +59,14 @@ function renderAllMovies(moviesArray) {
     moviesContainer.append(...movieCards);
 
 }
-renderAllMovies(tempData);
+
+const API_URL = "https://students-api.up.railway.app/movies"
+
+$.get(API_URL, function(data) {
+    console.log("Datos recibidos de la API:",data);
+    renderAllMovies(data);
+})
+.fail(function() {
+    console.error("Error: no se pudieron cargar las peliculas");
+    moviesContainer.innerHTML = "<p>Hubo un error al cargar las películas. Intenta de nuevo más tarde.</p>";
+})
